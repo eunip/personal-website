@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/photo.css"/>
+    <link rel="stylesheet" href="../css/justifiedGallery.min.css"/>
+    <link rel="stylesheet" href="../css/lightgallery.min.css"/>
+</head>
+<body>
+    <div id="header">
+        <h1>I take cool pics sometimes in addition to all the other great work I do!</h1>
+    </div>
+    <div id="cover">
+        <canvas class="orbit" id="starContainer"></canvas>
+        <div id="lightgallery">
+            <a href="../Photo/Asian Gourmet_Menu2_Food-Photo.jpg">
+                <img src="../Photo/Asian Gourmet_Menu2_Food-Photo.jpg">
+            </a>
+            <a href="../Photo/Asian Gourmet_Menu_Food-Photo.jpg">
+                <img src="../Photo/Asian Gourmet_Menu_Food-Photo.jpg">
+            </a>
+            <a href="../Photo/Edamame_Menu_Food-Photo.jpg">
+                <img src="../Photo/Edamame_Menu_Food-Photo.jpg">
+            </a>
+            <a href="../Photo/Flamingo Lounge_Portrait-Photo.jpg">
+                <img src="../Photo/Flamingo Lounge_Portrait-Photo.jpg">
+            </a>
+            <a href="../Photo/High Street_Street-Photo.jpg">
+                <img src="../Photo/High Street_Street-Photo.jpg">
+            </a>
+            <a href="../Photo/Ihor_Closeup_Portrait-Photo.jpg">
+                <img src="../Photo/Ihor_Closeup_Portrait-Photo.jpg">
+            </a>
+            <a href="../Photo/Ihor_Portrait-Photo.jpg">
+                <img src="../Photo/Ihor_Portrait-Photo.jpg">
+            </a>
+            <a href="../Photo/Lauren_Portrait-Photo.jpg">
+                <img src="../Photo/Lauren_Portrait-Photo.jpg">
+            </a>
+            <a href="../Photo/Manhattan Skyline_Portait-Photo.jpg">
+                <img src="../Photo/Manhattan Skyline_Portait-Photo.jpg">
+            </a>
+            <a href="../Photo/New World Trade Center_Portrait-Photo.jpg">
+                <img src="../Photo/New World Trade Center_Portrait-Photo.jpg">
+            </a>
+            <a href="../Photo/Rainy High Street_Street-Photo.jpg">
+                <img src="../Photo/Rainy High Street_Street-Photo.jpg">
+            </a>
+            <a href="../Photo/Timesquare_Dreams_Street-Photo.jpg">
+                <img src="../Photo/Timesquare_Dreams_Street-Photo.jpg">
+            </a>
+            <a href="../Photo/Timesquare_Passing Time_Street-Photo.jpg">
+                <img src="../Photo/Timesquare_Passing Time_Street-Photo.jpg">
+            </a>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="../js/jquery.justifiedGallery.min.js"></script>
+    <script src="../js/lightgallery.min.js"></script>
+
+    <script type="text/javascript" src="../js/three.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+
+    <script>
+        max_particle_count = 30
+        material = new THREE.MeshBasicMaterial({color: 0x333333, opacity: 0.7})
+        $("#lightgallery").justifiedGallery({
+            rowHeight : 200,
+            lastRow : 'nojustify',
+            margins : 3
+        })
+        lightGallery(document.getElementById('lightgallery'), {
+            thumbnail:true
+        })
+    </script>
+</body>
+</html>
