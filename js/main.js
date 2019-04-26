@@ -93,6 +93,36 @@ var WEBGL = {
 
 }
 
+if ( WEBGL.isWebGLAvailable() || WEBGL.isWebGL2Available()) {
+    var scene = new THREE.Scene()
+    var camera = new THREE.PerspectiveCamera(55, window.innerWidth/window.innerHeight,
+            0.1, 1500)
+
+    var latest_pointer = {x: 0, y: 0}
+
+    var renderer = new THREE.WebGLRenderer({
+        alpha: true,
+        canvas: document.getElementById("starContainer")
+    })    
+
+    renderer.setSize(window.innerWidth, window.innerHeight)
+     
+    //0xaa00aa
+    var material = new THREE.MeshBasicMaterial({color: 0xaaaaaa, opacity: 0.7})
+    // let material = new THREE.MeshBasicMaterial({color: 0xaaaaaa, opacity: 0.7, wireframe: true})
+
+    //set up camera to have nice view
+    camera.position.z = 200
+    camera.rotation.z = 2*Math.PI/6
+    var max_particle_count = 160
+    var particles = []
+    var angle_mult = - Math.PI / 3
+    window.addEventListener( 'resize', onWindowResize, false );
+
+    requestAnimationFrame(render)
+} else {
+    console.log("No support")
+}
 
 
 function onWindowResize(){
@@ -123,35 +153,4 @@ function render(){
     // scene.rotation.x = (latest_pointer.y / (renderer.domElement.height/2) ) * angle_mult
     renderer.render(scene, camera)
     requestAnimationFrame(render)
-}
-
-window.addEventListener( 'resize', onWindowResize, false );
-if ( WEBGL.isWebGLAvailable() ) {
-    var scene = new THREE.Scene()
-    var camera = new THREE.PerspectiveCamera(55, window.innerWidth/window.innerHeight,
-            0.1, 1500)
-
-    var latest_pointer = {x: 0, y: 0}
-
-    var renderer = new THREE.WebGLRenderer({
-        alpha: true,
-        canvas: document.getElementById("starContainer")
-    })    
-
-    var landing = document.getElementById("landing")
-    renderer.setSize(window.innerWidth, window.innerHeight)
-     
-    //0xaa00aa
-    var material = new THREE.MeshBasicMaterial({color: 0xaaaaaa, opacity: 0.7})
-    // var material = new THREE.MeshBasicMaterial({color: 0xaaaaaa, opacity: 0.7, wireframe: true})
-
-    //set up camera to have nice view
-    camera.position.z = 200
-    camera.rotation.z = 2*Math.PI/6
-    var max_particle_count = 160
-    var particles = []
-    var angle_mult = - Math.PI / 3
-    requestAnimationFrame(render)
-} else {
-    console.log("No support")
 }
