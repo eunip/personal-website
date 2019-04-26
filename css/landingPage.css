@@ -13,9 +13,12 @@ div#landing  {
 
 #landing #name {
 	position: fixed;
-	top: 20vh;
-	left: 40vw;
+	/*top: 20vh;*/
+	/*left: 40vw;*/
+	top: 0;
+	left: 0;
 	width: 20vw;
+	min-width: 150px;
 }
 
 #landing #social {
@@ -86,9 +89,31 @@ div#landing  {
 	width: 8vw;
 	height: 8vw;
 	transition: opacity 0.4s;
+	user-select: none;
+}
+
+.menu-icon-container, .menu-icon-container > * {
+	outline: none;
+	-webkit-touch-callout: none; /* iOS Safari */
+	    -webkit-user-select: none; /* Safari */
+	     -khtml-user-select: none; /* Konqueror HTML */
+	       -moz-user-select: none; /* Firefox */
+	        -ms-user-select: none; /* Internet Explorer/Edge */
+	            user-select: none; /* Non-prefixed version, currently
+	                                  supported by Chrome and Opera */
 }
 
 #landing .menu-icon {
+	width: 100%;
+}
+
+
+svg .cls-4 {
+	transform-origin: center center;
+	-webkit-animation: smallPlanet 5s linear infinite; /* Safari 4+ */
+	 -moz-animation:    smallPlanet 5s linear infinite; /* Fx 5+ */
+	 -o-animation:      smallPlanet 5s linear infinite; /* Opera 12+ */
+	 animation:         smallPlanet 5s linear infinite; /* IE 10+, Fx 29+ */
 	width: 100%;
 }
 
@@ -130,6 +155,7 @@ div#landing  {
 	}
 
   #landing .menu-icon-container:after {
+  	user-select: none;
   	font-size: 14px;
   	line-height: 10px;
   	margin-top: 2px;
@@ -158,7 +184,7 @@ div#landing  {
   }
 }
 
-@media only screen and (min-width: 600px) and (max-width: 800px) {
+@media only screen and (min-width: 100px) and (max-width: 600px) {
 
   #landing .menu-icon-container:after {
   	font-size: 14px;
@@ -166,17 +192,18 @@ div#landing  {
   }
 
   #landing #outer-orbit {
-  	min-width: 80vw;
-  	min-height: 80vw;
+  	min-width: 100vw;
+  	min-height: 100vw;
   }
 
   #landing #inner-orbit {
-  	min-width: 48vw;
-  	min-height: 48vw;
+  	min-width: 62vw;
+  	min-height: 62vw;
   }
 
   #landing .section {
-  	width: 32vw;
+  	width: 40vw;
+  	height: 40vw;
   }
 
   #landing .menu-icon-container {
@@ -186,12 +213,29 @@ div#landing  {
 }
 
 @media only screen and (min-width: 1400px) {
-	#landing #name {
-		width: 400px;
-		left: calc(50vw - 200px);
-	}
-
 	#landing .menu-icon-container:after {
 		margin-top: 1vh;
+		font-size: 1.5rem;
 	}
+}
+
+@-webkit-keyframes smallPlanet {
+  0%   { transform: rotate(0deg); }
+  50%   { transform: rotate(180deg); }
+  100% { transform: rotate(360deg); }
+}
+@-moz-keyframes smallPlanet {
+	0%   { transform: rotate(0deg); }
+	50%   { transform: rotate(180deg); }
+	100% { transform: rotate(360deg); }
+}
+@-o-keyframes smallPlanet {
+	0%   { transform: rotate(0deg); }
+	50%   { transform: rotate(180deg); }
+	100% { transform: rotate(360deg); }
+}
+@keyframes smallPlanet {
+	0%   { transform: rotate(0deg); }
+	50%   { transform: rotate(180deg); }
+	100% { transform: rotate(360deg); }
 }

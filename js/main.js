@@ -23,6 +23,12 @@ let max_particle_count = 160
 let particles = []
 let angle_mult = - Math.PI / 3
 
+function onWindowResize(){
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize( window.innerWidth, window.innerHeight );
+}
+
 function render(){
     if(particles.length < max_particle_count && Math.random()>0.8){
         let particle = new THREE.SphereGeometry(Math.random() * 3)
@@ -46,5 +52,7 @@ function render(){
     renderer.render(scene, camera)
     requestAnimationFrame(render)
 }
+
+window.addEventListener( 'resize', onWindowResize, false );
 
 requestAnimationFrame(render)
