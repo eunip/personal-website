@@ -47,7 +47,7 @@ var WEBGL = {
 
     },
 
-    getErrorMessage: function ( version ) {
+    getWebGL2ErrorMessage: function ( version ) {
 
         var names = {
             1: 'WebGL',
@@ -93,30 +93,7 @@ var WEBGL = {
 
 }
 
-let scene = new THREE.Scene()
-let camera = new THREE.PerspectiveCamera(55, window.innerWidth/window.innerHeight,
-        0.1, 1500)
 
-let latest_pointer = {x: 0, y: 0}
-
-let renderer = new THREE.WebGLRenderer({
-    alpha: true,
-    canvas: document.getElementById("starContainer")
-})    
-
-let landing = document.getElementById("landing")
-renderer.setSize(window.innerWidth, window.innerHeight)
- 
-//0xaa00aa
-let material = new THREE.MeshBasicMaterial({color: 0xaaaaaa, opacity: 0.7})
-// let material = new THREE.MeshBasicMaterial({color: 0xaaaaaa, opacity: 0.7, wireframe: true})
-
-//set up camera to have nice view
-camera.position.z = 200
-camera.rotation.z = 2*Math.PI/6
-let max_particle_count = 160
-let particles = []
-let angle_mult = - Math.PI / 3
 
 function onWindowResize(){
     camera.aspect = window.innerWidth / window.innerHeight;
@@ -150,6 +127,30 @@ function render(){
 
 window.addEventListener( 'resize', onWindowResize, false );
 if ( WEBGL.isWebGLAvailable() ) {
+    var scene = new THREE.Scene()
+    var camera = new THREE.PerspectiveCamera(55, window.innerWidth/window.innerHeight,
+            0.1, 1500)
+
+    var latest_pointer = {x: 0, y: 0}
+
+    var renderer = new THREE.WebGLRenderer({
+        alpha: true,
+        canvas: document.getElementById("starContainer")
+    })    
+
+    var landing = document.getElementById("landing")
+    renderer.setSize(window.innerWidth, window.innerHeight)
+     
+    //0xaa00aa
+    var material = new THREE.MeshBasicMaterial({color: 0xaaaaaa, opacity: 0.7})
+    // var material = new THREE.MeshBasicMaterial({color: 0xaaaaaa, opacity: 0.7, wireframe: true})
+
+    //set up camera to have nice view
+    camera.position.z = 200
+    camera.rotation.z = 2*Math.PI/6
+    var max_particle_count = 160
+    var particles = []
+    var angle_mult = - Math.PI / 3
     requestAnimationFrame(render)
 } else {
     console.log("No support")
