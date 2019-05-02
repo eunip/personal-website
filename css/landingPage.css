@@ -82,70 +82,6 @@ div#landing  {
 	margin: auto;
 }
 
-#landing .section {
-	width: 20vw;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	align-items: center;
-}
-
-#landing .menu-icon-container {
-	width: 8vw;
-	height: 8vw;
-	transition: opacity 0.4s;
-	user-select: none;
-}
-
-.menu-icon-container, .menu-icon-container > * {
-	outline: none;
-	-webkit-touch-callout: none; /* iOS Safari */
-	    -webkit-user-select: none; /* Safari */
-	     -khtml-user-select: none; /* Konqueror HTML */
-	       -moz-user-select: none; /* Firefox */
-	        -ms-user-select: none; /* Internet Explorer/Edge */
-	            user-select: none; /* Non-prefixed version, currently
-	                                  supported by Chrome and Opera */
-}
-
-#landing .menu-icon {
-	width: 100%;
-}
-
-
-svg .cls-4 {
-	transform-origin: center center;
-	-webkit-animation: smallPlanet 5s linear infinite; /* Safari 4+ */
-	 -moz-animation:    smallPlanet 5s linear infinite; /* Fx 5+ */
-	 -o-animation:      smallPlanet 5s linear infinite; /* Opera 12+ */
-	 animation:         smallPlanet 5s linear infinite; /* IE 10+, Fx 29+ */
-	width: 100%;
-}
-
-#landing .menu-icon-container:hover img {
-	opacity: 0.5;
-}
-
-#landing .menu-icon-container:after {
-	color: white;
-	display: block;
-	color: rgba(0,0,0,0);
-	content: "";
-	transition: color 2s;
-	text-align: center;
-	font-size: 1em;
-	line-height: 1em;
-	font-family: Helvetica;
-	letter-spacing: 2px;
-	margin-top: 10px;
-	min-width: 40px;
-}
-
-#landing .menu-icon-container:hover:after {
-	content: attr(data-name);
-	color: rgba(255,255,255,1);
-}
-
 #landing .logo {
 	width: 100%;
 }
@@ -159,15 +95,6 @@ svg .cls-4 {
 		flex-direction: column;
 	}
 
-  #landing .menu-icon-container:after {
-  	user-select: none;
-  	font-size: 14px;
-  	line-height: 10px;
-  	margin-top: 2px;
-  	color: white;
-  	content: attr(data-name);
-  }
-
   #landing #outer-orbit {
   	min-width: 80vw;
   	min-height: 80vw;
@@ -177,25 +104,9 @@ svg .cls-4 {
   	min-width: 48vw;
   	min-height: 48vw;
   }
-
-  #landing .section {
-  	width: auto;
-  	height: 32vw;
-  }
-
-  #landing .menu-icon-container {
-  	width: 14vw;
-  	height: 14vw;
-  }
 }
 
 @media only screen and (min-width: 100px) and (max-width: 600px) {
-
-  #landing .menu-icon-container:after {
-  	font-size: 14px;
-  	line-height: 10px;
-  }
-
   #landing #outer-orbit {
   	min-width: 100vw;
   	min-height: 100vw;
@@ -205,42 +116,8 @@ svg .cls-4 {
   	min-width: 62vw;
   	min-height: 62vw;
   }
-
-  #landing .section {
-  	width: 40vw;
-  	height: 40vw;
-  }
-
-  #landing .menu-icon-container {
-  	width: 14vw;
-  	height: 14vw;
-  }
 }
 
 @media only screen and (min-width: 1400px) {
-	#landing .menu-icon-container:after {
-		margin-top: 1vh;
-		font-size: 1.5rem;
-	}
-}
 
-@-webkit-keyframes smallPlanet {
-  0%   { transform: rotate(0deg); }
-  50%   { transform: rotate(180deg); }
-  100% { transform: rotate(360deg); }
-}
-@-moz-keyframes smallPlanet {
-	0%   { transform: rotate(0deg); }
-	50%   { transform: rotate(180deg); }
-	100% { transform: rotate(360deg); }
-}
-@-o-keyframes smallPlanet {
-	0%   { transform: rotate(0deg); }
-	50%   { transform: rotate(180deg); }
-	100% { transform: rotate(360deg); }
-}
-@keyframes smallPlanet {
-	0%   { transform: rotate(0deg); }
-	50%   { transform: rotate(180deg); }
-	100% { transform: rotate(360deg); }
 }
