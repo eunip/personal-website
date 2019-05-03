@@ -31,44 +31,26 @@
     <div id="cover">
         <canvas class="orbit" id="starContainer"></canvas>
         <div id="lightgallery">
-            <a href="../Photo/Compressed/Asian Gourmet_Menu2_Food-Photo.jpg">
-                <img src="../Photo/Compressed/Asian Gourmet_Menu2_Food-Photo_Thumbnail.jpg">
+            <a data-src="https://www.youtube.com/watch?v=6w-WOwA5xw0" href="https://www.youtube.com/watch?v=6w-WOwA5xw0">
+                <img src="https://img.youtube.com/vi/6w-WOwA5xw0/0.jpg">
             </a>
-            <a href="../Photo/Compressed/Asian Gourmet_Menu_Food-Photo.jpg">
-                <img src="../Photo/Compressed/Asian Gourmet_Menu_Food-Photo_Thumbnail.jpg">
+            <a data-src="https://www.youtube.com/watch?v=nSEmeNdTRzI" href="https://www.youtube.com/watch?v=nSEmeNdTRzI">
+                <img src="https://img.youtube.com/vi/nSEmeNdTRzI/0.jpg">
             </a>
-            <a href="../Photo/Compressed/Edamame_Menu_Food-Photo.jpg">
-                <img src="../Photo/Compressed/Edamame_Menu_Food-Photo_Thumbnail.jpg">
+            <a data-src="https://www.youtube.com/watch?v=h8zX7oUsTx0" href="https://www.youtube.com/watch?v=h8zX7oUsTx0">
+                <img src="https://img.youtube.com/vi/h8zX7oUsTx0/0.jpg">
             </a>
-            <a href="../Photo/Compressed/Flamingo Lounge_Portrait-Photo.jpg">
-                <img src="../Photo/Compressed/Flamingo Lounge_Portrait-Photo_Thumbnail.jpg">
+            <a data-src="https://www.youtube.com/watch?v=x-vjFqMSwhM" href="https://www.youtube.com/watch?v=x-vjFqMSwhM">
+                <img src="https://img.youtube.com/vi/x-vjFqMSwhM/0.jpg">
             </a>
-            <a href="../Photo/Compressed/High Street_Street-Photo.jpg">
-                <img src="../Photo/Compressed/High Street_Street-Photo_Thumbnail.jpg">
+            <a data-src="https://www.youtube.com/watch?v=fHTzJDARq1g" href="https://www.youtube.com/watch?v=fHTzJDARq1g">
+                <img src="https://img.youtube.com/vi/fHTzJDARq1g/0.jpg">
             </a>
-            <a href="../Photo/Compressed/Ihor_Closeup_Portrait-Photo.jpg">
-                <img src="../Photo/Compressed/Ihor_Closeup_Portrait-Photo_Thumbnail.jpg">
+            <a data-src="https://www.youtube.com/watch?v=64VLBw4-S9g" href="https://www.youtube.com/watch?v=64VLBw4-S9g">
+                <img src="https://img.youtube.com/vi/64VLBw4-S9g/0.jpg">
             </a>
-            <a href="../Photo/Compressed/Ihor_Portrait-Photo.jpg">
-                <img src="../Photo/Compressed/Ihor_Portrait-Photo_Thumbnail.jpg">
-            </a>
-            <a href="../Photo/Compressed/Lauren_Portrait-Photo.jpg">
-                <img src="../Photo/Compressed/Lauren_Portrait-Photo_Thumbnail.jpg">
-            </a>
-            <a href="../Photo/Compressed/Manhattan Skyline_Portait-Photo.jpg">
-                <img src="../Photo/Compressed/Manhattan Skyline_Portait-Photo_Thumbnail.jpg">
-            </a>
-            <a href="../Photo/Compressed/New World Trade Center_Portrait-Photo.jpg">
-                <img src="../Photo/Compressed/New World Trade Center_Portrait-Photo_Thumbnail.jpg">
-            </a>
-            <a href="../Photo/Compressed/Rainy High Street_Street-Photo.jpg">
-                <img src="../Photo/Compressed/Rainy High Street_Street-Photo_Thumbnail.jpg">
-            </a>
-            <a href="../Photo/Compressed/Timesquare_Dreams_Street-Photo.jpg">
-                <img src="../Photo/Compressed/Timesquare_Dreams_Street-Photo_Thumbnail.jpg">
-            </a>
-            <a href="../Photo/Compressed/Timesquare_Passing Time_Street-Photo.jpg">
-                <img src="../Photo/Compressed/Timesquare_Passing Time_Street-Photo_Thumbnail.jpg">
+            <a data-src="https://www.youtube.com/watch?v=G0PPdmzLrzE" href="https://www.youtube.com/watch?v=G0PPdmzLrzE">
+                <img src="https://img.youtube.com/vi/G0PPdmzLrzE/0.jpg">
             </a>
         </div>
     </div>
@@ -76,6 +58,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="../js/jquery.justifiedGallery.min.js"></script>
     <script src="../js/lightgallery.min.js"></script>
+    <script src="../js/lg-video.min.js"></script>
 
     <script type="text/javascript" src="../js/three.min.js"></script>
     <script type="text/javascript" src="../js/main.js"></script>
@@ -90,9 +73,18 @@
             lastRow : 'nojustify',
             margins : 3
         })
-        lightGallery(document.getElementById('lightgallery'), {
-            thumbnail:true
+        $(document).ready(()=>{
+            $('#lightgallery').lightGallery(
+            {
+                youtubePlayerParams: {
+                    modestbranding: 1,
+                    showinfo: 0,
+                    rel: 0,
+                    controls: 1
+                }
+            })
         })
+        
     </script>
 </body>
 </html>
