@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/menu.css"/>
-    <link rel="stylesheet" href="../css/photo.css"/>
+    <link rel="stylesheet" href="../css/video.css"/>
     <link rel="stylesheet" href="../css/justifiedGallery.min.css"/>
     <link rel="stylesheet" href="../css/lightgallery.min.css"/>
 </head>
@@ -30,64 +30,18 @@
     </div>
     <div id="cover">
         <canvas class="orbit" id="starContainer"></canvas>
-        <div id="lightgallery">
-            <a data-src="https://www.youtube.com/watch?v=6w-WOwA5xw0" href="https://www.youtube.com/watch?v=6w-WOwA5xw0">
-                <img src="https://img.youtube.com/vi/6w-WOwA5xw0/0.jpg">
-                <div class="caption">
-                  <h4>Getting Your Life Together With Groceries</h4>
-                  <p></p>
-                </div>
-            </a>
-            <a data-src="https://www.youtube.com/watch?v=nSEmeNdTRzI" href="https://www.youtube.com/watch?v=nSEmeNdTRzI">
-                <img src="https://img.youtube.com/vi/nSEmeNdTRzI/0.jpg">
-                <div class="caption">
-                  <h4>Conundrum: Designing VR for Compassion</h4>
-                  <p></p>
-                </div>
-            </a>
-            <a data-src="https://www.youtube.com/watch?v=h8zX7oUsTx0" href="https://www.youtube.com/watch?v=h8zX7oUsTx0">
-                <img src="https://img.youtube.com/vi/h8zX7oUsTx0/0.jpg">
-                <div class="caption">
-                  <h4>Seek. Feel. Hone.</h4>
-                  <p></p>
-                </div>
-            </a>
-            <a data-src="https://www.youtube.com/watch?v=x-vjFqMSwhM" href="https://www.youtube.com/watch?v=x-vjFqMSwhM">
-                <img src="https://img.youtube.com/vi/x-vjFqMSwhM/0.jpg">
-                <div class="caption">
-                  <h4>Student Media Study: Vox Style Imitation</h4>
-                  <p></p>
-                </div>
-            </a>
-            <a data-src="https://www.youtube.com/watch?v=fHTzJDARq1g" href="https://www.youtube.com/watch?v=fHTzJDARq1g">
-                <img src="https://img.youtube.com/vi/fHTzJDARq1g/0.jpg">
-                <div class="caption">
-                  <h4>I Don’t Know Who I Am</h4>
-                  <p></p>
-                </div>
-            </a>
-            <a data-src="https://www.youtube.com/watch?v=64VLBw4-S9g" href="https://www.youtube.com/watch?v=64VLBw4-S9g">
-                <img src="https://img.youtube.com/vi/64VLBw4-S9g/0.jpg">
-                <div class="caption">
-                  <h4>Moving On (In Life)</h4>
-                  <p></p>
-                </div>
-            </a>
-            <a data-src="https://www.youtube.com/watch?v=G0PPdmzLrzE" href="https://www.youtube.com/watch?v=G0PPdmzLrzE">
-                <img src="https://img.youtube.com/vi/G0PPdmzLrzE/0.jpg">
-                <div class="caption">
-                  <h4>A Day With Joyce (My Mom)</h4>
-                  <p></p>
-                </div>
-            </a>
+        <div id="portfolio">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/6w-WOwA5xw0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/nSEmeNdTRzI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/h8zX7oUsTx0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/x-vjFqMSwhM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/fHTzJDARq1g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/64VLBw4-S9g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/G0PPdmzLrzE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="../js/jquery.justifiedGallery.min.js"></script>
-    <script src="../js/lightgallery.min.js"></script>
-    <script src="../js/lg-video.min.js"></script>
-
     <script type="text/javascript" src="../js/three.min.js"></script>
     <script type="text/javascript" src="../js/main.js"></script>
 
@@ -96,24 +50,6 @@
             max_particle_count = 60
             material = new THREE.MeshBasicMaterial({color: 0x333333, opacity: 0.7})    
         }
-        $("#lightgallery").justifiedGallery({
-            rowHeight : 200,
-            lastRow : 'nojustify',
-            margins : 3
-        })
-        $(document).ready(()=>{
-            $('#lightgallery').lightGallery(
-            {
-                pullCaptionUp: true,
-                subHtmlSelectorRelative: true,
-                youtubePlayerParams: {
-                    modestbranding: 1,
-                    showinfo: 0,
-                    rel: 0,
-                    controls: 1
-                }
-            })
-        })
         
     </script>
 </body>
