@@ -1,11 +1,11 @@
 #header {
 	width: 100%;
-	background-color: #222;
 	display: block;
-	margin-bottom: 30px;
 	padding-bottom: 30px;
-	background: #333 url(../img/stardust.png) repeat;
-	box-shadow: 0 0 5px 5px rgba(0,0,0,0.4), 0 0 10px 20px rgba(0,0,0,0.2);
+}
+
+body {
+	background: #333 url(../img/stardust.png) repeat !important;
 }
 
 #header img {
@@ -29,11 +29,23 @@
 	padding: 20px;
 	font-kerning: 2px;
 }
+
+#line {
+	width: 100%;
+	max-width: 70%;
+	background-color: #d99443;
+	margin-bottom: 40px;
+	margin: auto;
+	height: 2px;
+	display: block;
+}
+
 #lightgallery {
 	margin: auto;
 	display: block;
 	max-width: 70%;
 	z-index: 4;
+	margin-top: 20px;
 	margin-bottom: 30px;
 }
 
