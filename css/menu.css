@@ -104,7 +104,7 @@ svg .cls-4 {
   color: rgba(255,255,255,1);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .menu-icon-container:after {
   	user-select: none;
   	font-size: 14px;
