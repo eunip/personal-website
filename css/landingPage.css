@@ -92,7 +92,8 @@ div#landing  {
   	transform: rotateZ(90deg);
   	white-space: nowrap;
   	top: 42vh !important;
-  	margin-left: -40%;
+  	opacity: 0.7 !important;
+  	margin-left: -35vw;
   }
 }
 
