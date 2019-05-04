@@ -18,6 +18,14 @@ body {
 	display: block;
 }
 
+#header img, #header svg {
+	transition: opacity 0.4s;
+}
+
+#header img:hover, #header svg:hover {
+	opacity: 0.5;
+}
+
 #header .row {
 	flex-wrap: nowrap;
 	width: 100%;

@@ -1,3 +1,22 @@
+#social {
+  position: absolute;
+  flex-direction: column;
+  right: 0;
+  top: 0;
+  z-index: 5;
+}
+
+#social a {
+  outline: none;
+}
+
+.social-icon {
+  width: 5vw;
+  min-width: 50px;
+  max-width: 200px;
+}
+
+
 .section {
   width: 20vw;
   height: auto;
