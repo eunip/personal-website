@@ -4,6 +4,10 @@
 	padding-bottom: 30px;
 }
 
+#header a {
+	outline: none;
+}
+
 body {
 	background: #333 url(../img/stardust.png) repeat !important;
 }
