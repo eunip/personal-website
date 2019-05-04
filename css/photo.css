@@ -4,6 +4,21 @@
 	padding-bottom: 30px;
 }
 
+.centered {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#header #social {
+	position: relative;
+	margin: auto auto;
+}
+
+#header .centered {
+	margin-top: -20px;
+	min-width: 150px;
+}
 #header a {
 	outline: none;
 }
@@ -12,8 +27,9 @@ body {
 	background: #333 url(../img/stardust.png) repeat !important;
 }
 
-#header img {
-	max-width: 300px;
+#header > a img {
+	min-width: 150px;
+	max-width: 20vw;
 	margin: auto auto;
 	display: block;
 }
