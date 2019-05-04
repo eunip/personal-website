@@ -86,6 +86,14 @@ div#landing  {
   	min-width: 48vw;
   	min-height: 48vw;
   }
+
+  #about {
+  	text-align: left !important;
+  	transform: rotateZ(90deg);
+  	white-space: nowrap;
+  	top: 42vh !important;
+  	margin-left: -40%;
+  }
 }
 
 @media only screen and (min-width: 100px) and (max-width: 600px) {
@@ -102,4 +110,28 @@ div#landing  {
 
 @media only screen and (min-width: 1400px) {
 
+}
+
+#about {
+	transform-origin: center center;
+	color: white;
+	text-align: center;
+	font-size: 2.4em;
+	font-family: 'Lato', sans-serif;
+	font-weight: 100;
+	position: fixed;
+	top: 67vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	opacity: 0.5;
+}
+
+#line1 {
+	color: #d99443;
+}
+
+#line2 {
+	margin-top: -5px;
 }
