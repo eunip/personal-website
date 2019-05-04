@@ -4,6 +4,10 @@
 	padding-bottom: 30px;
 }
 
+#header a {
+	outline: none;
+}
+
 body {
 	background: #333 url(../img/stardust.png) repeat !important;
 }
@@ -12,6 +16,14 @@ body {
 	max-width: 300px;
 	margin: auto auto;
 	display: block;
+}
+
+#header img, #header svg {
+	transition: opacity 0.4s;
+}
+
+#header img:hover, #header svg:hover {
+	opacity: 0.5;
 }
 
 #header .row {
