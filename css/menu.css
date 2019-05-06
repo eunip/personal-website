@@ -118,14 +118,15 @@ svg .cls-4 {
   }
 
   .section {
-  	width: auto;
-  	height: 32vw;
+  	width: 32vw;
+  	min-height: 32vw;
+    max-height: 32vw;
   }
 
   .menu-icon-container {
-  	width: 14vw;
-  	min-height: 14vw;
-    max-height: 14vw;
+  	width: 16vw;
+  	min-height: 16vw;
+    max-height: 16vw;
   }
 }
 
