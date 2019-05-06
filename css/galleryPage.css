@@ -10,6 +10,10 @@
 	justify-content: center;
 }
 
+.active-page {
+	filter: hue-rotate(140deg);
+}
+
 #header #social {
 	position: relative;
 	margin: auto auto;
@@ -20,6 +24,8 @@
 	min-width: 150px;
 }
 #header a {
+	width: 100%;
+	height: 100%;
 	outline: none;
 }
 
@@ -45,6 +51,7 @@ body {
 #header .row {
 	flex-wrap: nowrap;
 	width: 100%;
+	height: auto;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -127,6 +134,16 @@ body {
 }
 
 @media only screen and (min-width: 1400px) {
+	.menu-icon-container {
+	  width: 5vw;
+	  min-height: 5vw;
+	  max-height: 5vw;
+	}
+	.section {
+		width: 12vw;
+		min-height: 12vw;
+		max-height: 12vw;
+	}
 	#lightgallery {
 		max-width: 70%;
 	}
