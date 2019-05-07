@@ -1,0 +1,111 @@
+#about-container {
+	max-width: 70%;
+	margin: auto auto;
+}
+
+#headshot-spacer, #about-text {
+	width: 50vw;
+}
+
+.full-line {
+	width: 100%;
+	background-color: #d99443;
+	margin: auto;
+	height: 2px;
+	display: block;
+}
+
+#about-text {
+	box-sizing: border-box;
+	padding: 12px 7px;
+	color: white;
+	font-family: 'Lato', sans-serif;
+}
+
+#headshot {
+	position: fixed;
+	bottom: 0;
+	right: 50%;
+	width: auto;
+	height: auto;
+	max-width: 50%;
+	max-height: 50%;
+}
+/*resume and social*/
+#about-social {
+  min-width: 160px;
+  position: relative;
+  margin: auto;
+  flex-direction: column;
+  right: 0;
+  top: 0;
+  z-index: 5;
+}
+
+#about-social a {
+  display: inline-block;
+  outline: none;
+}
+
+#about-links {
+	flex-wrap: wrap;
+}
+
+#resume-button {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+#resume-button h2 {
+	cursor: pointer;
+	color: #d99443;
+	box-sizing: border-box;
+	text-align: center;
+	border: 1px solid #d99443;
+	padding: 10px 17px;
+	transition: opacity 0.4s;
+	min-width: 150px;
+}
+
+#resume-button:hover h2 {
+	opacity: 0.5;
+}
+
+#about-social .social-icon {
+  width: 5vw;
+  min-width: 50px;
+  max-width: 200px;
+  transition: opacity 0.4s;
+}
+
+.social-icon:hover {
+  opacity: 0.5;
+}
+
+
+@media only screen and (max-width: 800px) {
+	#headshot-spacer {
+		display: none;
+	}
+	#about-text {
+		width: 100%;
+	}
+	
+	#about-container {
+		/*margin-bottom: 50vh;*/
+	}
+
+	#headshot {
+		position: relative;
+		max-height: 50vh;
+		height: auto;
+		max-width: 80%;
+		width: 80%;
+		display: block;
+		margin: auto auto;
+		right: auto;
+		left: auto;
+		bottom: 0;
+		border-bottom: 2px solid #d99443;
+	}
+}

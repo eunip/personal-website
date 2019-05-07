@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/menu.css"/>
     <link rel="stylesheet" href="../css/galleryPage.css"/>
+    <link rel="stylesheet" href="../css/about.css"/>
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 </head>
 <body>
@@ -30,7 +31,25 @@
     <div id="cover">
         <canvas class="orbit" id="starContainer"></canvas>
         <!-- <div id="line"></div> -->
-        
+        <div class="centered-line" id="about-container">
+            <div id="headshot-spacer"> </div>
+            <div id="about-text">
+                <h2>Sup my hombres, amigos, and comrades</h2>
+                <div class="full-line"></div>
+                <h3>
+                    Whitness me in all my glory. You like my website? Imagine how good my work is if I'm being paid!
+                </h3>
+                <div class="centered-line" id="about-links"> 
+                    <div id="resume-button"><h2>Resume</h2></div>
+                    <div id="about-social">
+                        <a href="https://www.youtube.com/channel/UCysfHX27rjnh0yiBSumXT8A"><img src="../img/icon_youtube.svg" class="social-icon"></a>
+                        <a href="https://www.instagram.com/dearme_euni.p/"><img src="../img/icon_insta.svg" class="social-icon"></a>
+                        <a href="#" target="_blank" onclick="sendEmail(); return false;" id="sendMail"><img src="../img/icon_email.svg" class="social-icon"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img id="headshot" src="../img/Me.png">
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
