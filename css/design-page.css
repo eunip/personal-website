@@ -5,6 +5,8 @@
 }
 
 video {
+  width: 50%;
+  background: black;
   max-width: 600px;
   height: auto;
   display: inline-block;
