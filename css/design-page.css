@@ -4,8 +4,33 @@
 	margin: auto;
 }
 
+video {
+  width: 70%;
+  max-width: 600px;
+  height: auto;
+  display: inline-block;
+}
+
+.centered-line {
+	width: 100%;
+	max-width: 70%;
+	justify-content: space-between;
+	margin: auto;
+}
+
 @media only screen and (max-width: 800px) {
 	#cover img {
 		max-width: 100%;
+	}
+
+	.centered-line {
+		max-width: 100%;
+		width: 100%;
+		flex-wrap: wrap;
+	}
+
+	video {
+		width: 100%;
+		margin: auto;
 	}
 }
