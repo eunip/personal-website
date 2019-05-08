@@ -5,16 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/menu.css"/>
     <link rel="stylesheet" href="../css/galleryPage.css"/>
-    <link rel="stylesheet" href="../css/about.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Lato:200,400" rel="stylesheet">
+    <link rel="stylesheet" href="../css/justifiedGallery.min.css"/>
+    <link rel="stylesheet" href="../css/lightgallery.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,400" rel="stylesheet">
 </head>
 <body>
     <div id="header">
         <a href="../index.html"><img src="../img/icon_logotype.svg"></a>
+        <div class="centered"> 
+            <div id="social">
+                <a href="https://www.youtube.com/channel/UCysfHX27rjnh0yiBSumXT8A"><img src="../img/icon_youtube.svg" class="social-icon"></a>
+                <a href="https://www.instagram.com/dearme_euni.p/"><img src="../img/icon_insta.svg" class="social-icon"></a>
+                <a href="#" target="_blank" onclick="sendEmail(); return false;" id="sendMail"><img src="../img/icon_email.svg" class="social-icon"></a>
+            </div>
+        </div>
         <div class="row">
             <div class="section side">
-                <div class="menu-icon-container" data-name="ABOUT"><a href="./about.html"><img src="../img/icon_aboutme.svg" class="menu-icon active-page"></a></div>
-                <div class="menu-icon-container" data-name="DESIGN"><a href="./design.html"><img src="../img/icon_design.svg" class="menu-icon"></a></div>
+                <div class="menu-icon-container" data-name="ABOUT"><a href="./about.html"><img src="../img/icon_aboutme.svg" class="menu-icon"></a></div>
+                <div class="menu-icon-container" data-name="DESIGN"><a href="./design.html"><img src="../img/icon_design.svg" class="menu-icon active-page"></a></div>
             </div>
             <div class="section">
                 <a href="../index.html">
@@ -30,29 +38,20 @@
     </div>
     <div id="cover">
         <canvas class="orbit" id="starContainer"></canvas>
-        <!-- <div id="line"></div> -->
-        <div class="centered-line" id="about-container">
-            <div id="headshot-spacer"> </div>
-            <div id="about-text">
-                <h2>Sup my hombres, amigos, and comrades</h2>
-                <div class="full-line"></div>
-                <h3>
-                    Whitness me in all my glory. You like my website? Imagine how good my work is if I'm being paid!
-                </h3>
-                <div class="centered-line" id="about-links"> 
-                    <div id="resume-button"><h2>RESUME</h2></div>
-                    <div id="about-social">
-                        <a href="https://www.youtube.com/channel/UCysfHX27rjnh0yiBSumXT8A"><img src="../img/icon_youtube.svg" class="social-icon"></a>
-                        <a href="https://www.instagram.com/dearme_euni.p/"><img src="../img/icon_insta.svg" class="social-icon"></a>
-                        <a href="#" target="_blank" onclick="sendEmail(); return false;" id="sendMail"><img src="../img/icon_email.svg" class="social-icon"></a>
-                    </div>
-                </div>
-            </div>
+        <div id="line"></div>
+        <div id="lightgallery">
+            <a href="./design/terra.html">
+                <img src="../img/design/Homme_De_Terre-Thumbnail.png">
+            </a>
+            <a href="../Photo/Compressed/Asian Gourmet_Menu_Food-Photo.jpg">
+                <img src="../Photo/Compressed/Asian Gourmet_Menu_Food-Photo_Thumbnail.jpg">
+            </a>
         </div>
-        <img id="headshot" src="../img/Me.png">
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="../js/jquery.justifiedGallery.min.js"></script>
+    <script src="../js/lightgallery.min.js"></script>
 
     <script type="text/javascript" src="../js/three.min.js"></script>
     <script type="text/javascript" src="../js/main.js"></script>
@@ -62,6 +61,11 @@
             max_particle_count = 60
             material = new THREE.MeshBasicMaterial({color: 0x333333, opacity: 0.7})
         }
+        $("#lightgallery").justifiedGallery({
+            rowHeight : 200,
+            lastRow : 'justify',
+            margins : 3
+        })
     </script>
 </body>
 </html>

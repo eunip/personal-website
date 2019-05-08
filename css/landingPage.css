@@ -10,6 +10,36 @@ div#landing  {
 	background: #333 url(../img/stardust.png) repeat;
 }
 
+#made-by {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	z-index: 100;
+	font-size: 1.2rem;
+	padding: 5px 12px;
+}
+
+#made-by h3 {
+	padding: 0 5px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 100;
+	color: white;
+	opacity: 0.5;
+	display: inline-block;
+}
+
+#made-by a {
+	outline: none;
+	text-decoration: none;
+}
+
+#made-by a h3 {
+	transition: opacity 0.4s;
+}
+
+#made-by:hover a h3 {
+	opacity: 1;
+}
 
 #landing #name {
 	position: fixed;
