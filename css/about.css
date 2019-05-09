@@ -53,12 +53,16 @@
 
 #about-text h3 {
 	font-weight: 200;
+	letter-spacing: 1px;
 }
 
 #resume-button {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+}
+#resume-button a {
+	text-decoration: none;
 }
 #resume-button h2 {
 	cursor: pointer;
@@ -99,7 +103,7 @@
 	#about-text {
 		width: 100%;
 	}
-	
+
 	#about-container {
 		/*margin-bottom: 50vh;*/
 	}
