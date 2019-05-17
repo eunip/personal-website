@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">    
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/menu.css">
-    <link rel="stylesheet" type="text/css" href="css/landingPage.css">    
+    <link rel="stylesheet" type="text/css" href="css/landingPage.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,400" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127917594-2"></script>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-127917594-2');
+</script>
 </head>
 <body>
     <div id="landing">
@@ -20,10 +29,10 @@
         </div>
 
         <img src="img/icon_logotype.svg" id="name">
-        
+
         <canvas class="orbit" id="starContainer"></canvas>
         <div class="orbit">
-            <div id="outer-orbit"></div>    
+            <div id="outer-orbit"></div>
         </div>
         <div class="orbit">
             <div id="inner-orbit"></div>
@@ -47,7 +56,7 @@
     <div id="made-by"><h3>Collaboration with:</h3><a href="https://www.qporest.com"><h3>qporest</h3></a></div>
 
     <script type="text/javascript">
-        
+
 
         // let mail = document.getElementById('sendMail')
         // mail.addEventListener('click', sendEmail, false)
