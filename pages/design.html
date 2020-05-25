@@ -22,8 +22,8 @@
         <a href="../index.html"><img src="../img/icon_logotype.svg"></a>
         <div class="centered">
             <div id="social">
-                <a href="https://www.youtube.com/channel/UCysfHX27rjnh0yiBSumXT8A"><img src="../img/icon_youtube.svg" class="social-icon"></a>
-                <a href="https://www.instagram.com/dearme_euni.p/"><img src="../img/icon_insta.svg" class="social-icon"></a>
+                <a href="https://www.youtube.com/channel/UCysfHX27rjnh0yiBSumXT8A" target="_blank"><img src="../img/icon_youtube.svg" class="social-icon"></a>
+                <a href="https://www.instagram.com/euni.p.creative/" target="_blank"><img src="../img/icon_insta.svg" class="social-icon"></a>
                 <a href="#" target="_blank" onclick="sendEmail(); return false;" id="sendMail"><img src="../img/icon_email.svg" class="social-icon"></a>
             </div>
         </div>
@@ -48,14 +48,14 @@
         <canvas class="orbit" id="starContainer"></canvas>
         <div id="line"></div>
         <div id="lightgallery">
-            <a data-src="https://qporest.itch.io/yaci" href="https://qporest.itch.io/yaci">
+            <a data-src="https://qporest.itch.io/yaci" href="https://qporest.itch.io/yaci" target="_blank">
               <img src="../img/design/Yacie_Thumbnail.jpg">
               <div class="caption">
                 <h4>72-Hour GameJam | MiniJam 48: Yacië | Writer, Artist</h4>
                 <p></p>
             </div>
             </a>
-            <a data-src="https://qporest.itch.io/the-ordinary-adventures-of-vader-the-cat" href="https://qporest.itch.io/the-ordinary-adventures-of-vader-the-cat">
+            <a data-src="https://qporest.itch.io/the-ordinary-adventures-of-vader-the-cat" href="https://qporest.itch.io/the-ordinary-adventures-of-vader-the-cat" target="_blank">
               <img src="../img/design/Vader_Thumbnail.jpg">
               <div class="caption">
                 <h4>72-Hour GameJam | MiniJam 20: The Ordinary Adventures of Vader the Cat | Writer, Artist</h4>
@@ -64,9 +64,17 @@
             </a>
             <a href="./design/halfcup.html">
                 <img src="../img/design/HalfCup-Thumbnail.png">
+                <div class="caption">
+                  <h4>Senior Thesis Project | Half-Cup UX/UI Design | Researcher, Designer</h4>
+                  <p></p>
+                </div>
             </a>
             <a href="./design/medicar.html">
                 <img src="../img/design/MediCar-Thumbnail.png">
+                <div class="caption">
+                  <h4>72-Hour Design Sprint | MediCar | Designer</h4>
+                  <p></p>
+                </div>
             </a>
         </div>
     </div>
@@ -84,8 +92,8 @@
             material = new THREE.MeshBasicMaterial({color: 0x333333, opacity: 0.7})
         }
         $("#lightgallery").justifiedGallery({
-            rowHeight : 200,
-            lastRow : 'justify',
+            rowHeight : 225,
+            lastRow : 'left',
             margins : 3
         })
     </script>

@@ -88,7 +88,7 @@ body {
 	z-index: 4;
 	margin-top: 20px;
 	margin-bottom: 30px;
-	background-color: #111;
+	/* background-color: #111; */
 }
 
 #cover  {
@@ -169,7 +169,7 @@ body {
 	.menu-icon-container {
 		width: 12vw;
 		min-height: 12vw;
-		max-height: 12vw;	
+		max-height: 12vw;
 	}
 	.section svg {
 		width: 100%;
