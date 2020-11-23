@@ -172,10 +172,10 @@ div#landing  {
 	opacity: 0.5;
 }
 
-#line1 {
+.line1 {
 	color: #ffffff;
 }
 
-#line2 {
+.line2 {
 	margin-top: -3px;
 }

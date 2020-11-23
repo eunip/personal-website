@@ -31,7 +31,12 @@
     </div>
     <div id="cover">
         <canvas class="orbit" id="starContainer"></canvas>
-        <div id="line"></div>
+        <div class="line"></div>
+        <div id="pdf-viewer"></div>
+        <style>
+          .pdfobject-container { height: 30rem; max-width: 70%; width: 100%; margin: auto; border: 1rem solid rgba(0,0,0,.1); }
+
+        </style>
         <img src="../../img/design/Half-Cup.png">
         <div class="centered-line">
         </div>
@@ -48,5 +53,7 @@
             material = new THREE.MeshBasicMaterial({color: 0x333333, opacity: 0.7})
         }
     </script>
+    <script type="text/javascript" src="../../js/pdfobject.min.js"></script>
+    <script>PDFObject.embed("../../pdfs/Eunice_Park_Senior_Thesis_Process_Book.pdf", "#pdf-viewer");</script>
 </body>
 </html>
